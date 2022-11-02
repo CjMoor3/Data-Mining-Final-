@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ignore the data files
+data/C-NMC_leukemia
+data/archive.zip
+
+# Ignore vscode files
+.vscode
