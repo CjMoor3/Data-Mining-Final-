@@ -16,7 +16,7 @@
 ### Project Goals
 - Classify images of blood cells as cancerous or not.
 
-### Approached
+### Approach
 - Neural Net
 - Random Forest
 
