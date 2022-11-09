@@ -134,3 +134,9 @@ data/archive.zip
 
 # Ignore vscode files
 .vscode
+
+### Data should go in the data folder and not be added to the repo. It'll freak out
+data/C-NMC_Leukemia.nosync
+data/C-NMC_Leukemia
+
+.DS_STORE
