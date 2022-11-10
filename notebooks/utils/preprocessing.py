@@ -1,4 +1,4 @@
-from keras.preprocessing.image import load_img, img_to_array, array_to_img
+from keras_preprocessing.image import load_img, img_to_array, array_to_img
 import tensorflow as tf
 import os
 
