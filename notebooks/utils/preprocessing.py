@@ -2,7 +2,7 @@ from keras_preprocessing.image import load_img, img_to_array, array_to_img
 import tensorflow as tf
 import os
 
-def get_gray_images(directory:str) -> list[tf.Tensor]:
+def get_gray_images(directory:str, size=-1) -> list[tf.Tensor]:
     '''
     inputs - directory where the files to be converted are stored
 
@@ -20,10 +20,9 @@ def get_gray_images(directory:str) -> list[tf.Tensor]:
     ### Grayscale Images
     grayscale_imgs = []
     for rgb_img in image_array:
-        grayscale_imgs.append(
-            tf.image.rgb_to_grayscale(
-                rgb_img, name=None
-            )
-        )
+        tensor = tf.image.rgb_to_grayscale(rgb_img, name=None)
+        if (size > 0):
+            tensor = tf.image.resize(tensor, [size, size])
+        grayscale_imgs.append(tensor)
     
     return grayscale_imgs
