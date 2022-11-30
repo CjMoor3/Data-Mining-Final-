@@ -2,7 +2,7 @@ from keras_preprocessing.image import load_img, img_to_array, array_to_img
 import tensorflow as tf
 import os
 
-def get_gray_images(directory:str, size=-1) -> list[tf.Tensor]:
+def get_gray_images(directory:str, size=-1): #-> list[tf.Tensor]:
     '''
     inputs - directory where the files to be converted are stored
 
@@ -27,7 +27,7 @@ def get_gray_images(directory:str, size=-1) -> list[tf.Tensor]:
     
     return grayscale_imgs
 
-def get_hsv_images(directory:str, size=-1, batch_size = 10) -> list[tf.Tensor]:
+def get_hsv_images(directory:str, size=-1, batch_size = 10): #-> list[tf.Tensor]:
     '''
     HSV images bifurcate image intensity and color data- they are usually considered less noisy in the training process.
     inputs - directory where the files to be converted are stored
@@ -56,7 +56,7 @@ def get_hsv_images(directory:str, size=-1, batch_size = 10) -> list[tf.Tensor]:
     
     return hsv_imgs
 
-def get_saturated_images(directory:str, size=-1, batch_size = 10) -> list[tf.Tensor]:
+def get_saturated_images(directory:str, size=-1, batch_size = 10): #-> list[tf.Tensor]:
     '''
     inputs - directory where the files to be converted are stored
 
